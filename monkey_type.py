@@ -9,7 +9,6 @@ url = "https://monkeytype.com/"
 with webdriver.Chrome() as driver:
     driver.get(url)
     driver.maximize_window()
-    sleep(1)
     driver.find_element(By.XPATH, '//*[@id="cookiePopup"]/div[2]/div[2]/button[1]').click()
     text = driver.find_element(By.ID, 'words')
     try:
@@ -22,4 +21,5 @@ with webdriver.Chrome() as driver:
         print("finish")
 
     sleep(10)
+
 
